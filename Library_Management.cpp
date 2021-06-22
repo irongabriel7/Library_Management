@@ -1,6 +1,7 @@
 #include<iostream>
-#include <string.h>
-#include <unistd.h>
+#include<string.h>
+#include<unistd.h>
+#include<stdio.h>
 
 
 #define ADMINUSER "admin"
@@ -32,6 +33,7 @@ using namespace std;
 class student
 {
 	int studentid[nstudents];
+	char ks;
 	string sname[nstudents];
 	string sclass[nstudents];
 		
@@ -57,10 +59,11 @@ class student
              cout<<"\n NEW STUDENT ENTRY...\n";
              cout<<"\n Enter The Student ID : ";
              cin>>studentid[i];
+             ks = cin.get();
              cout<<"\n Enter The Name of The Student: ";
-             cin>>sname[i];
+             getline(cin,sname[i]);
              cout<<"\n Enter The Student Class: ";
-             cin>>sclass[i];
+             getline(cin,sclass[i]);
              cout<<"\n\n\n Student Created..\n";
              sleep(1);
              flags2=true;
@@ -179,10 +182,11 @@ class student
               system("clear");
               cout<<"\n\n Enter New Student ID: ";
               cin>>studentid[i];
+              ks = cin.get();
               cout<<"\nEnter New Student Name: ";
-              cin>>sname[i];
+              getline(cin,sname[i]);
               cout<<"\nEnter New Student Class: ";
-              cin>>sclass[i];
+              getline(cin,sclass[i]);
               break;
             }
             
@@ -206,6 +210,7 @@ class book :public student
 	int issuebid[nbooks];
 	int issuesid[nbooks];
 	int nofissues;
+	char ws;
 	string bname[nbooks];
 	string bcat[nbooks];
 	
@@ -233,10 +238,11 @@ class book :public student
              cout<<"\n NEW BOOK ENTRY...\n";
              cout<<"\n Enter The book ID : ";
              cin>>bid[i];
-             cout<<"\n Enter The Name of The Book: ";
-             cin>>bname[i];
-             cout<<"\n Enter The Book Category: ";
-             cin>>bcat[i];
+             ws = cin.get();
+             cout<<"Enter The Name of The Book: ";
+             getline(cin,bname[i]);
+             cout<<"Enter The Book Category: ";
+             getline(cin,bcat[i],'\n');
              cout<<"\n\n\n Book Created..\n";
              flag2=true;
              break;
