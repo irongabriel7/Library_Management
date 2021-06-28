@@ -456,7 +456,6 @@ class admin :public book
 	void adminlogin()
         {
          char adchoice;
-         char choi;
          system("clear");
          cout<<"\n\n\t-------------- Admin Login --------------";
          cout<<"\n\n\tEnter username: ";
