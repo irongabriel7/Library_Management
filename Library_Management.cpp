@@ -33,7 +33,6 @@ using namespace std;
 class student
 {
 	int studentid[nstudents];
-	char ks;
 	string sname[nstudents];
 	string sclass[nstudents];
 		
@@ -59,7 +58,7 @@ class student
              cout<<"\n NEW STUDENT ENTRY...\n";
              cout<<"\n Enter The Student ID : ";
              cin>>studentid[i];
-             ks = cin.get();
+             cin.ignore();
              cout<<"\n Enter The Name of The Student: ";
              getline(cin,sname[i]);
              cout<<"\n Enter The Student Class: ";
@@ -182,7 +181,7 @@ class student
               system("clear");
               cout<<"\n\n Enter New Student ID: ";
               cin>>studentid[i];
-              ks = cin.get();
+              cin.ignore();
               cout<<"\nEnter New Student Name: ";
               getline(cin,sname[i]);
               cout<<"\nEnter New Student Class: ";
@@ -210,7 +209,6 @@ class book :public student
 	int issuebid[nbooks];
 	int issuesid[nbooks];
 	int nofissues;
-	char ws;
 	string bname[nbooks];
 	string bcat[nbooks];
 	
@@ -238,7 +236,7 @@ class book :public student
              cout<<"\n NEW BOOK ENTRY...\n";
              cout<<"\n Enter The book ID : ";
              cin>>bid[i];
-             ws = cin.get();
+             cin.ignore();
              cout<<"Enter The Name of The Book: ";
              getline(cin,bname[i]);
              cout<<"Enter The Book Category: ";
