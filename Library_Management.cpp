@@ -495,9 +495,9 @@ class admin :public book
                         break;
                case '7':del_student();
                         break;
-               default: cout<<"\a";
+               default: adchoice=0;
                }
-          }while(adchoice==8);
+          }while(adchoice!=0);
           }
          else
          {
