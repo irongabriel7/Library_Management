@@ -7,8 +7,8 @@
 #define ADMINUSER "admin"
 #define ADMINPASSWORD "admin123"
 
-const int nbooks=3; //Maximum Book Limit
-const int nstudents=3; //Maximum Student Limit
+const int nbooks=2; //Maximum Book Limit
+const int nstudents=2; //Maximum Student Limit
 
 using namespace std;
 /*
@@ -495,9 +495,9 @@ class admin :public book
                         break;
                case '7':del_student();
                         break;
-               default: adchoice=0;
+               default: cout<<"\a";
                }
-          }while(adchoice!=0);
+          }while(adchoice==8);
           }
          else
          {
